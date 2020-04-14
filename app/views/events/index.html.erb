@@ -4,6 +4,6 @@
 
 <div class="container events-container">
   <% @events.each do |event| %>
-    <%= event.title %>
+    <%= link_to event.title, event_path(event) %>
   <% end %>
 </div>
