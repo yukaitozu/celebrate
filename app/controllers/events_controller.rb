@@ -8,7 +8,7 @@ class EventsController < ApplicationController
   end
 
   def new
-    @event = Restaurant.new
+    @event = Event.new
   end
 
   def create

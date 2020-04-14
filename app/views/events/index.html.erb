@@ -1,0 +1,9 @@
+<div class="container new-container">
+  <%= link_to "Create New Event", new_event_path, class: "btn btn-primary" %>
+</div>
+
+<div class="container events-container">
+  <% @events.each do |event| %>
+    <%= event.title %>
+  <% end %>
+</div>
