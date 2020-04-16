@@ -3,9 +3,17 @@
   <div>
     <%= link_to "Create New Event", new_event_path, class: "btn btn-event" %>
   </div>
-  <div class="event-card">
-    <% @events.each do |event| %>
-      <%= link_to event.title, event_path(event) %>
-    <% end %>
+  <div class="cards">
+    <div class="card-trip">
+      <div class="card-trip-infos">
+        <div>
+          <% @events.each do |event| %>
+            <h2><%= link_to event.title, event_path(event) %></h2>
+            <p><%= event.description %></p>
+          <% end %>
+        </div>
+        <h2 class="card-trip-date">£99.99</h2>
+      </div>
+    </div>
   </div>
 </div>
