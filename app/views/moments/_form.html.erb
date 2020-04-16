@@ -1,4 +1,4 @@
 <%= simple_form_for [@event, @moment] do |f| %>
-  <%= f.input :event_date %>
+  <%= f.input :event_date, as: :string, required: false, input_html: {class: "datepicker"} %>
   <%= f.submit "Add", class: 'btn btn-primary'%>
 <% end %>
