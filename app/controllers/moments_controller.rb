@@ -1,4 +1,12 @@
 class MomentsController < ApplicationController
+  def index
+    @moments = Moment.all
+  end
+
+  def show
+    @moment = Moment.find(params[:id])
+  end
+
   def new
     @event = Event.find(params[:event_id])
     @moment = Moment.new

@@ -7,6 +7,6 @@ Rails.application.routes.draw do
     resources :moments, only: [:new, :create]
   end
   resources :guests, only: [:show, :destroy]
-  resources :locations, only: [:destroy]
-  resources :moments, only: [:destroy]
+  resources :locations, only: [:show, :destroy]
+  resources :moments, only: [:index, :show, :destroy]
 end

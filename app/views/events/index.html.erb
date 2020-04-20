@@ -12,7 +12,9 @@
             <p><%= event.description %></p>
           <% end %>
         </div>
-        <h2 class="card-trip-date">£99.99</h2>
+        <% @events.moments.each do |moment| %>
+            <h2 class="card-trip-date"><%= @moment.event_date %></h2>
+        <% end %>
       </div>
     </div>
   </div>
